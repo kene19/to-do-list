@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.con{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+height: 100vh;
+}
+img{
+width: 50px;
+height: 50px;
+cursor: pointer;
+}
+.gon{
+    width: 340px;
+    position: relative;
+    padding: 30px 10px 50px 10px;
+} 
+ ul li{
+    list-style: none;
+    font-size: 20px;
+    padding: 7px 9px 12px 40px;
+    user-select: none;
+    position: relative;
+}
+ ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(new/uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+ul li.checked{
+    text-decoration: line-through;
+    color: #cf3838;
+}
+ul li.checked::before{
+    text-decoration: line-through;
+    background-image: url(new/ckc.png);
+}
+.mian{
+    width: 350px;
+    padding: 50px 10px 50px 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    position: relative;
+    
+}
+.in{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+    margin-top: 20px
+}
+.inp{
+    width: 75%;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+}
+.delete{
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    right: 20px;
+    cursor: pointer;
+}
+.add{
+    padding: 5px;
+    border-radius: 10px;
+    cursor: cell;
+
+
+}
+h1{
+    
+    margin-left: 25px;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1::after{
+    content: '';
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    background-image: url(new/to-do-list.png);
+    background-size: cover;
+    background-position: center;
+    top: 40px;
+    right: 25px;
+}
+.er{
+    
+    border: 2px solid #ff0303;
+    animation: sh 0.5s ease forwards;
+    transition: all 0.3s;
+    
+}
+
+
+ body{
+    
+        background: linear-gradient(70deg, #7e837e, #000000);
+        background-size: 400% 400%;
+        animation: AnimationName 5s ease infinite;
+    
+ }
+ @keyframes sh{
+    0%{
+       transform: translateX(-5px);
+    }
+    25%{
+        transform: translateX(5px);
+    }
+    50%{
+        transform: translateX(-5px);
+    }
+    75%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+ }
+ @keyframes AnimationName {
+    0%{background-position:0% 15%}
+    50%{background-position:100% 86%}
+    100%{background-position:0% 15%}
+}
